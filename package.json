@@ -1,0 +1,38 @@
+{
+  "name": "debtors-prison-break",
+  "version": "1.0.0",
+  "description": "A tool for visualizing, managing, and addressing credit card debt",
+  "main": "build/server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build",
+    "watch-js": "./node_modules/.bin/babel src -d build --experimental -w",
+    "dev-server": "node build/server/webpack",
+    "server": "nodemon build/server/server",
+    "start": "npm run watch-js & npm run dev-server & npm run server",
+    "build": "npm run clean && ./node_modules/.bin/babel src -d build --experimental"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njdup/DebtorsPrisonBreak.git"
+  },
+  "author": "@njdup & @ruben0827",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/njdup/DebtorsPrisonBreak/issues"
+  },
+  "homepage": "https://github.com/njdup/DebtorsPrisonBreak#readme",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-core": "^5.8.22",
+    "babel-loader": "^5.3.2",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "nodemon": "^1.4.1",
+    "react": "^0.13.3",
+    "react-hot-loader": "^1.2.8",
+    "react-router": "^0.13.3",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
